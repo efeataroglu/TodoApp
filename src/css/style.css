@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+:root {
+  --gray-100: rgb(248, 249, 250);
+  --blue-500: rgb(13, 110, 253);
+  --blue-900: rgb(3, 23, 51);
+  --yellow-300: rgb(255, 239, 8);
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--blue-900) !important;
+  border: 0;
+}
+
+.col-12 {
+  float: none;
+  margin: auto;
+}
+.card-header.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Indie Flower", cursive;
+  font-size: 3rem;
+  color: var(--gray-100);
+  background-color: var(--blue-900);
+}
+.card-header img {
+  max-width: 130px;
+}
+
+.card-body {
+  font-family: "Acme", sans-serif;
+}
+
+.task {
+  text-transform: capitalize;
+}
+
+.task label.checked {
+  text-decoration-line: line-through;
+}
+
+.card.mt-3 {
+  font-family: "Acme", sans-serif;
+}
+
+.p-3 {
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px var(--blue-900);
+}
+
+.card-header.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Acme", sans-serif;
+  background-color: var(--blue-900);
+}
+
+.filters span {
+  display: inline-block;
+  position: relative;
+  margin-right: 15px;
+  color: var(--gray-100);
+  cursor: pointer;
+}
+
+.filters span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--yellow-300);
+
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.filters span:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.filters span.active {
+  color: var(--blue-500);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropdown-toggle::after {
+  display: none;
+}
