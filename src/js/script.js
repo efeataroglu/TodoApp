@@ -1,5 +1,14 @@
 let taskList = [];
 
+let navBar = document.querySelector(".card-header.top");
+let darkMode = document.querySelector("#dark-mode-icon");
+let body = document.body;
+
+darkMode.addEventListener("click", () => {
+  navBar.classList.toggle("dark-nav");
+  body.classList.toggle("dark-mode");
+});
+
 if (localStorage.getItem("taskList") !== null) {
   taskList = JSON.parse(localStorage.getItem("taskList"));
 }

@@ -3,6 +3,7 @@
 
 :root {
   --gray-100: rgb(248, 249, 250);
+  --gray-900: rgb(33, 37, 41);
   --blue-500: rgb(13, 110, 253);
   --blue-900: rgb(3, 23, 51);
   --yellow-300: rgb(255, 239, 8);
@@ -102,4 +103,23 @@ input[type="checkbox"]:checked {
 }
 .dropdown-toggle::after {
   display: none;
+}
+
+/* DARK-MODE | ON CLICK*/
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-nav {
+  background-color: black;
+  box-shadow: none;
+  border-bottom: 1px rgba(211, 211, 211, 0.205) solid;
+}
+
+/* DARK-MODE ICON */
+#dark-mode-icon {
+  font-size: larger;
+  cursor: pointer;
+  padding: 15px;
 }
